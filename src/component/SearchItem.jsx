@@ -4,6 +4,7 @@ import RepoList from './RepoList';
 
 const SearchItem = () => {
     const [items, setItems] = useState({});
+
     const [username, setUsername] = useState("");
     const [repositories, setRepositories] = useState([]);
 
@@ -27,6 +28,8 @@ const SearchItem = () => {
             setItems(profileJson);
             setRepositories(repoJson);
         }
+        localStorage.setItem('items', JSON.stringify(items));
+
 
     };
 
@@ -42,6 +45,7 @@ const SearchItem = () => {
                         value={username}
                         onChange={onChangeHandler}
                     />
+
                 </div>
                 <br />
                 <div className="form-group col-md-12">
@@ -56,6 +60,7 @@ const SearchItem = () => {
                 </div>
             </form>
             <br />
+
             <Profile items={items} repositories={repositories} />
             <RepoList items={items} repositories={repositories} />
         </div>
