@@ -1,33 +1,34 @@
 import React from 'react'
 
 const RepoList = ({ items, repositories }) => {
+    const isEmpty = Object.keys(repositories).length === 0;
     return (
 
-        <div>
+        <>
+            {(isEmpty) ? "" :
+                <table className="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Repository Name</th>
+                            <th scope="col">Repository Description</th>
 
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">Repository Name</th>
-                        <th scope="col">Repository Description</th>
+                        </tr>
+                    </thead>
 
-                    </tr>
-                </thead>
+                    {repositories.map(repo => {
+                        return (
+                            <tbody>
+                                <tr key={repo.name}>
+                                    <td> {repo.name}</td>
+                                    <td> {repo.description}</td>
 
-                {repositories.map(repo => {
-                    return (
-                        <tbody>
-                            <tr>
-                                <td> {repo.name}</td>
-                                <td> {repo.description}</td>
+                                </tr>
+                            </tbody>
+                        )
+                    })}
 
-                            </tr>
-                        </tbody>
-                    )
-                })}
-
-            </table>
-        </div>
+                </table>}
+        </>
     )
 }
 
