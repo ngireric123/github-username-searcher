@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RepoList = ({ items, repositories }) => {
+const RepoList = ({ repositories }) => {
     const isEmpty = Object.keys(repositories).length === 0;
     return (
 

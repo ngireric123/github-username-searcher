@@ -63,8 +63,8 @@ const SearchItem = () => {
             </form>
             <br />
 
-            <Profile items={items} repositories={repositories} />
-            <RepoList items={items} repositories={repositories} />
+            <Profile items={items} />
+            <RepoList repositories={repositories} />
         </div>
     )
 }

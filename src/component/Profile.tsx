@@ -1,4 +1,4 @@
-const Profile: any = ({ items, repositories }) => {
+const Profile: any = ({ items }) => {
     const isEmpty = Object.keys(items).length === 0;
 
     return (

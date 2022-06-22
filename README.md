@@ -7,7 +7,7 @@ ___
 - React/TypeScript
 - SCSS
 
-## Visit App hosted on Netlify :computer:
+## App Link hosted on Netlify :computer:
 
 [Github UserName Search](https://bit.ly/3bkPdyP)
 
