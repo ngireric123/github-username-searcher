@@ -7,6 +7,10 @@ ___
 - React/TypeScript
 - SCSS
 
+## Visit App hosted on Netlify :computer:
+
+[Github UserName Search](https://bit.ly/3bkPdyP)
+
 ## Setting up the application :wrench:
 ___
 
@@ -21,7 +25,6 @@ Install npm dependencies
 Run the app in the development mode
 
 ```$ npm start```
-
 
 ## Author :computer:
 
