@@ -9,7 +9,7 @@ ___
 
 ## App Link hosted on Netlify :computer:
 
-[Github UserName Search](https://bit.ly/3bkPdyP)
+[Github UserName Search](https://serene-strudel-1264de.netlify.app/)
 
 ## Setting up the application :wrench:
 ___

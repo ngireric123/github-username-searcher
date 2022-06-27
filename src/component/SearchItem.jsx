@@ -28,10 +28,6 @@ const SearchItem = () => {
             setItems(profileJson);
             setRepositories(repoJson);
         }
-        // localStorage.setItem('myCat', 'Tom');
-
-        // localStorage.setItem('items', 'items');
-
 
     };
 
