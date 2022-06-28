@@ -8,24 +8,30 @@ const SearchItem = () => {
     const [username, setUsername] = useState("");
     const [repositories, setRepositories] = useState([]);
 
+    const [loading, setLoading] = useState(false);
+
     const onChangeHandler = e => {
         setUsername(e.target.value);
     };
 
     const submitHandler = async e => {
         e.preventDefault();
+        setLoading(true);
 
 
         const profile = await fetch(`https://api.github.com/users/${username}`);
         const profileJson = await profile.json();
 
-
         const repositories = await fetch(profileJson.repos_url);
         const repoJson = await repositories.json();
 
+        if (!profileJson) {
+            setLoading(false);
 
-        if (profileJson) {
+        } else {
+            setLoading(false);
             setItems(profileJson);
+
             setRepositories(repoJson);
         }
 
@@ -58,9 +64,14 @@ const SearchItem = () => {
                 </div>
             </form>
             <br />
+            {loading ? (<h4 style={{ textAlign: "center" }}>Loading...</h4>) : (
 
-            <Profile items={items} />
-            <RepoList repositories={repositories} />
+                <>
+                    <Profile items={items} />
+                    <RepoList repositories={repositories} />
+                </>
+            )
+            }
         </div>
     )
 }

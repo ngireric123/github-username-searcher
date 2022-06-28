@@ -19,7 +19,8 @@ const RepoList = ({ repositories }) => {
                         return (
                             <tbody>
                                 <tr key={repo.name}>
-                                    <td> {repo.name}</td>
+
+                                    <td> <a href={repo.html_url}>{repo.name} </a></td>
                                     <td> {repo.description}</td>
 
                                 </tr>
