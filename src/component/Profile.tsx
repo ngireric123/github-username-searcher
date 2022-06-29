@@ -6,7 +6,7 @@ const Profile: any = ({ items }) => {
         <>
             {(isEmpty) ? "" :
 
-                <><img className="rounded-circle rounded mx-auto d-block" width="200" height="200" src={items.avatar_url} alt="avatar"></img><table className="table caption-top">
+                <><img className="rounded rounded mx-auto d-block" width="200" height="200" src={items.avatar_url} alt="avatar"></img><table className="table caption-top">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
